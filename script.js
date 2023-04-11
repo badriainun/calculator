@@ -65,20 +65,6 @@ const calculate = () => {
   calculationOperator = "";
 };
 
-const resultPercentage = document.querySelector(".equal-sign");
-equalSign.addEventListener("click", () => {
-  let result = "";
-  switch (calculationPercent) {
-    case "%":
-      result = parseFloat(prevNumber) / 100;
-      break;
-    default:
-      return;
-  }
-  currentNumber = result;
-  calculationPercent = "";
-});
-
 const equalSign = document.querySelector(".equal-sign");
 equalSign.addEventListener("click", () => {
   calculate();
