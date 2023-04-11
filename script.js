@@ -47,7 +47,7 @@ const calculate = () => {
   let result = "";
   switch (calculationOperator) {
     case "+":
-      result = parseInt(prevNumber) + parseInt(currentNumber);
+      result = parseFloat(prevNumber) + parseFloat(currentNumber);
       break;
     case "-":
       result = prevNumber - currentNumber;
@@ -64,6 +64,20 @@ const calculate = () => {
   currentNumber = result;
   calculationOperator = "";
 };
+
+const resultPercentage = document.querySelector(".equal-sign");
+equalSign.addEventListener("click", () => {
+  let result = "";
+  switch (calculationPercent) {
+    case "%":
+      result = parseFloat(prevNumber) / 100;
+      break;
+    default:
+      return;
+  }
+  currentNumber = result;
+  calculationPercent = "";
+});
 
 const equalSign = document.querySelector(".equal-sign");
 equalSign.addEventListener("click", () => {
